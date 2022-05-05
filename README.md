@@ -12,7 +12,6 @@ The code is built on IMDN and RCAN  (PyTorch).  See [IMDN](https://github.com/Zh
 
 # Model parameters
 ![performance](https://github.com/wangzheyuan-666/FeNet/blob/main/images/performance.png)
-
 Trade-off between performance and number of parameters on Urban100 ×2 dataset.
 
 # Architecture of FeNet
@@ -30,7 +29,8 @@ Trade-off between performance and number of parameters on Urban100 ×2 dataset.
 
 ![natural results](https://github.com/wangzheyuan-666/FeNet/blob/main/images/nature_image_results.png) -->
 
-Citation
+# Citation
+
 If you find FeNet useful in your research, please consider citing:
 
 ```@ARTICLE{9759417,
