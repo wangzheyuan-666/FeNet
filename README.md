@@ -33,7 +33,7 @@ Trade-off between performance and number of parameters on Urban100 ×2 dataset.
 Citation
 If you find FeNet useful in your research, please consider citing:
 
-···@ARTICLE{9759417,
+```@ARTICLE{9759417,
   author={Wang, Zheyuan and Li, Liangliang and Xue, Yuan and Jiang, Chenchen and Wang, Jiawen and Sun, Kaipeng and Ma, Hongbing},
   journal={IEEE Transactions on Geoscience and Remote Sensing}, 
   title={FeNet: Feature Enhancement Network for Lightweight Remote-Sensing Image Super-Resolution}, 
