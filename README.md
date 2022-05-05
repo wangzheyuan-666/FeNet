@@ -10,11 +10,37 @@ Wang, Zheyuan and Li, Liangliang and Xue, Yuan and Jiang, Chenchen and Wang, Jia
 The code is built on IMDN and RCAN  (PyTorch).  See [IMDN](https://github.com/Zheng222/IMDN) and [RCAN](https://github.com/yulunzhang/RCAN) for details
 
 
+# Model parameters
+![performance]()
+Trade-off between performance and number of parameters on Urban100 ×2 dataset.
 
-Runing testing:
+Running time
 
-# Set5 x2 IMDN
-python test_IMDN.py --test_hr_folder Test_Datasets/Set5/ --test_lr_folder Test_Datasets/Set5_LR/x2/ --output_folder results/Set5/x2 --checkpoint checkpoints/IMDN_x2.pth --upscale_factor 2
-# RealSR IMDN_AS
-python test_IMDN_AS.py --test_hr_folder Test_Datasets/RealSR/ValidationGT --test_lr_folder Test_Datasets/RealSR/ValidationLR/ --output_folder results/RealSR --checkpoint checkpoints/IMDN_AS.pth
-Calculating IMDN_RTC's FLOPs and parameters, input size is 240*360
+Trade-off between performance and running time on Set5 ×4 dataset. VDSR, DRCN, and LapSRN were implemented by MatConvNet, while DRRN, and IDN employed Caffe package. The rest EDSR-baseline, CARN, and our IMDN utilized PyTorch.
+
+Adaptive Cropping
+
+The diagrammatic sketch of adaptive cropping strategy (ACS). The cropped image patches in the green dotted boxes.
+
+Visualization of feature maps
+
+Visualization of output feature maps of the 6-th progressive refinement module (PRM).
+
+Citation
+If you find IMDN useful in your research, please consider citing:
+
+@inproceedings{Hui-IMDN-2019,
+  title={Lightweight Image Super-Resolution with Information Multi-distillation Network},
+  author={Hui, Zheng and Gao, Xinbo and Yang, Yunchu and Wang, Xiumei},
+  booktitle={Proceedings of the 27th ACM International Conference on Multimedia (ACM MM)},
+  pages={2024--2032},
+  year={2019}
+}
+
+@inproceedings{AIM19constrainedSR,
+  title={AIM 2019 Challenge on Constrained Super-Resolution: Methods and Results},
+  author={Kai Zhang and Shuhang Gu and Radu Timofte and others},
+  booktitle={The IEEE International Conference on Computer Vision (ICCV) Workshops},
+  year={2019}
+}
+
