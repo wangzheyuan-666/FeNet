@@ -2,11 +2,9 @@
 
 This repository is for FeNet introduced in the following paper
 
-Wang, Zheyuan and Li, Liangliang and Xue, Yuan and Jiang, Chenchen and Wang, Jiawen and Sun, Kaipeng and Ma, Hongbing, "FeNet: Feature Enhancement Network for Lightweight Remote-Sensing Image Super-Resolution" in IEEE Transactions on Geoscience and Remote Sensing, [[paper](https://ieeexplore.ieee.org/document/9759417)]
+Z. Wang et al., "FeNet: Feature Enhancement Network for Lightweight Remote-Sensing Image Super-Resolution," in IEEE Transactions on Geoscience and Remote Sensing,  2022,  [[paper](https://ieeexplore.ieee.org/document/9759417)]
 
   
-
-
 The code is built on IMDN and RCAN  (PyTorch).  See [IMDN](https://github.com/Zheng222/IMDN) and [RCAN](https://github.com/yulunzhang/RCAN) for details
 
 
