@@ -12,19 +12,22 @@ The code is built on IMDN and RCAN  (PyTorch).  See [IMDN](https://github.com/Zh
 
 # Model parameters
 ![performance](https://github.com/wangzheyuan-666/FeNet/blob/main/images/performance.png)
+
 Trade-off between performance and number of parameters on Urban100 ×2 dataset.
 
-Running time
+# Architecture of FeNet
 
-Trade-off between performance and running time on Set5 ×4 dataset. VDSR, DRCN, and LapSRN were implemented by MatConvNet, while DRRN, and IDN employed Caffe package. The rest EDSR-baseline, CARN, and our IMDN utilized PyTorch.
+![FeNet](https://github.com/wangzheyuan-666/FeNet/blob/main/images/FeNet.png)
 
-Adaptive Cropping
 
-The diagrammatic sketch of adaptive cropping strategy (ACS). The cropped image patches in the green dotted boxes.
+# Lightweight lattice block
 
-Visualization of feature maps
+![LLB](https://github.com/wangzheyuan-666/FeNet/blob/main/images/LLB.png)
 
-Visualization of output feature maps of the 6-th progressive refinement module (PRM).
+# Visiual results
+![RS_results](https://github.com/wangzheyuan-666/FeNet/blob/main/images/RS_image_results.png)
+
+![natural results](https://github.com/wangzheyuan-666/FeNet/blob/main/images/nature_image_results.png)
 
 Citation
 If you find IMDN useful in your research, please consider citing:
