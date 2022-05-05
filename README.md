@@ -7,7 +7,7 @@ Wang, Zheyuan and Li, Liangliang and Xue, Yuan and Jiang, Chenchen and Wang, Jia
   
 
 
-The code is built on [IMDN](https://github.com/Zheng222/IMDN) (PyTorch) 
+The code is built on IMDN and RCAN  (PyTorch).  See [IMDN](https://github.com/Zheng222/IMDN) and [RCAN](https://github.com/yulunzhang/RCAN) for details
 
 
 
