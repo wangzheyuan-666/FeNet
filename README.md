@@ -7,6 +7,9 @@ Z. Wang et al., "FeNet: Feature Enhancement Network for Lightweight Remote-Sensi
   
 The code is built on IMDN and RCAN  (PyTorch).  See [IMDN](https://github.com/Zheng222/IMDN) and [RCAN](https://github.com/yulunzhang/RCAN) for details
 
+# Remote sensing test datasets
+RS-1 and RS-2 used in this paper. Download from Baidu disk
+[[link address]([https://ieeexplore.ieee.org/document/9759417](https://pan.baidu.com/s/1ZSJjsr98E-CIQhjsi3XSgw?pwd=ojfq ))]
 
 # Model parameters
 ![performance](https://github.com/wangzheyuan-666/FeNet/blob/main/images/performance.png)
