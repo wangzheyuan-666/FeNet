@@ -96,12 +96,6 @@ class FEB(nn.Module):
         x3=self.CB3(x2)
         f1=self.AF1(x3,x2)
         f2=self.AF2(f1,x1)
-        ls.append(torch.mean(x1[0].data,dim=0))
-        ls.append(torch.mean(x2[0].data,dim=0))
-        ls.append(torch.mean(x3[0].data,dim=0))
-        ls.append(torch.mean(f1[0].data,dim=0))
-        ls.append(torch.mean(f2[0].data,dim=0))
-        ls.append(torch.mean((x+f2)[0].data,dim=0))
         return x+f2
 class RB(nn.Module):
     def __init__(self, num_fea):
@@ -181,7 +175,6 @@ class FENet(nn.Module):
 
         # BFM
         H = self.BFM(outs)
-        # H=self.FM(torch.cat(outs,dim=1))
 
         # reconstruct
         out = self.upsample(H + fea)
@@ -197,89 +190,11 @@ def count_parameters(net):
             l *= j
         k = k + l
     print("total parameters:" + str(k))                                 
-# if __name__=='__main__':
-#     a=torch.rand((1,3,128,128))#.to('cuda')
-#     net=FENet(2,num_fea=32)#.to('cuda')
-#     count_parameters(net)
-#     y=net(a)
-#     # print(y)
-#     from thop import profile
-#     input = torch.randn(1, 3, 256//2, 256//2)
-#     flops, params = profile(net, (input,))
-#     print('flops: ', flops, 'params: ', params)
-    
-#     # import time
-#     # t0 = time.time()
-#     # for i in range(30):
-#     #     out = net(a)
-#     # t = time.time() - t0
-#     # print('average running time: ', t/30)
-
-ls=[]
 if __name__=='__main__':
 
-    from skimage.util import dtype, random_noise
-    import random
-    import cv2,matplotlib.pyplot as plt,numpy as np
-    img = cv2.imread(r'F:\DATA\superResolution\benchmarkSR\RS-2\LR_bicubic\x2\mediumresidential76_LRBI_x2.png')[:,:,[2,1,0]]
-    # img = cv2.imread(r'F:\DATA\superResolution\benchmark11\Set5\LR_bicubic\x2\butterflyx2.png')[:,:,[2,1,0]]
-    
-    # lss=[img/255.0]
-    # ls.append(img/255.0)
-    img=torch.tensor(img/255,dtype=torch.float32).permute(2,0,1).unsqueeze(dim=0)
-
-    net=FENet(2)
-    net.load_state_dict(torch.load(r'F:\research\IMDN-master\modules\useinpaper\fenet\x2\best.pth'))
-    out=net(img)
-    out=out.squeeze(dim=0).permute(1,2,0).data.numpy()
-    # ls.append(out)
-    # # print(len(ls))
-    # plt.imshow(out)
-    # plt.colorbar(fraction=0.045)
-    # plt.show()
+    net=FENet(2,num_fea=32)#.to('cuda')
+    count_parameters(net)
 
 
-    # from copy import deepcopy
-    # lsss=deepcopy(ls)
-    # lsss=ls[:]
-    # fig=plt.figure()
-    # print(len(lsss))
 
-    for i in range(4):
-        for j in range(6):
-            plt.subplot(4,6,(i)*6+j+1)
-
-            plt.xticks([])
-            plt.yticks([])
-            plt.imshow(ls[(i)*6+j])
-            plt.colorbar(fraction=0.045)
-            # ax[i][j].colorbar(fraction=0.045)
-    plt.show()
-
-    
-    # idx=random.sample(range(1,41),10)
-    # idx=sorted(idx)
-    # print(idx)
-    # lss.append(ls[0])
-
- 
-
-    # for i in idx:
-    #     lss.append(ls[i])
-    # lss.append(ls[-1])
-    # print(len(lss))
-
-
-    # fig=plt.figure()
-
-    # for i in range(3):
-    #     for j in range(4):
-    #         plt.subplot(3,4,(i)*4+j+1)
-    #         # 
-    #         plt.xticks([])
-    #         plt.yticks([])
-    #         plt.imshow(lss[(i)*4+j])
-    #         plt.colorbar(fraction=0.045)
-    #         # ax[i][j].colorbar(fraction=0.045)
-
-    # plt.show()
+  
