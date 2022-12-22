@@ -55,7 +55,7 @@ python train.py --root /path/to/DIV2K_decoded/ --scale 4
 # Set5 x2 
  python test.py --test_hr_folder ./Test_Datasets/set5/HR/ --test_lr_folder ./Test_Datasets/set5/LR_bicubic/x2/ --output_folder ./results/figure --checkpoint ./checkpoints/FeNet_x2.pth --upscale_factor 2
 ``` 
-Note that the  PSNR and SSIM  can also be evaluated on Matlab R2017a and the code can be referred to [Evaluate_PSNR_SSIM.m](https://github.com/yulunzhang/RCAN/blob/master/RCAN_TestCode/Evaluate_PSNR_SSIM.m).  And [test.py](FeNet-main\test.py) is the pytorch version of Evaluate_PSNR_SSIM.m.
+Note that the  PSNR and SSIM  can also be evaluated on Matlab R2017a and the code can be referred to [Evaluate_PSNR_SSIM.m](https://github.com/yulunzhang/RCAN/blob/master/RCAN_TestCode/Evaluate_PSNR_SSIM.m).  And [test.py](FeNet\test.py) is the pytorch version of Evaluate_PSNR_SSIM.m.
 
 
 
