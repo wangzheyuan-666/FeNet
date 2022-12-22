@@ -7,13 +7,13 @@ import skimage.color as sc
 import cv2
 from model.fenet import FENet
 
-parser = argparse.ArgumentParser(description='IMDN')
-parser.add_argument("--test_hr_folder", type=str, default=r'./set5/HR/',
+parser = argparse.ArgumentParser(description='FeNet')
+parser.add_argument("--test_hr_folder", type=str, default=r'./Test_Datasets/set5/HR/',
                     help='the folder of the target images')
-parser.add_argument("--test_lr_folder", type=str, default=r'./set5/LR_bicubic/x2/',
+parser.add_argument("--test_lr_folder", type=str, default=r'./Test_Datasets/set5/LR_bicubic/x2/',
                     help='the folder of the input images')
-parser.add_argument("--output_folder", type=str, default=r'FeNet/results/figure')
-parser.add_argument("--checkpoint", type=str, default=r'FeNet/checkpoints/FeNet_x2.pth.pth',
+parser.add_argument("--output_folder", type=str, default=r'./results/figure')
+parser.add_argument("--checkpoint", type=str, default=r'./checkpoints/FeNet_x2.pth',
                     help='checkpoint folder to use')
 parser.add_argument('--cuda', action='store_true', default=True,
                     help='use cuda')
